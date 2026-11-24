@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download CashFlow Bank App</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+      color: #f8fafc;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+    .card {
+      background: rgba(30, 41, 59, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 40px 32px;
+      max-width: 440px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(12px);
+    }
+    .icon-box {
+      width: 72px;
+      height: 72px;
+      background: linear-gradient(135deg, #10b981, #059669);
+      border-radius: 18px;
+      margin: 0 auto 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: #ffffff;
+      box-shadow: 0 10px 15px -3px rgba(16, 185, 129, 0.3);
+    }
+    h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: -0.02em;
+    }
+    p {
+      color: #94a3b8;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 28px;
+    }
+    .btn {
+      display: inline-block;
+      width: 100%;
+      background: #10b981;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 16px 24px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: background 0.2s ease, transform 0.1s ease;
+      box-shadow: 0 4px 14px 0 rgba(16, 185, 129, 0.39);
+    }
+    .btn:hover {
+      background: #059669;
+    }
+    .btn:active {
+      transform: scale(0.98);
+    }
+    .meta {
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      font-size: 0.8rem;
+      color: #64748b;
+      display: flex;
+      justify-content: space-between;
+    }
+    .status {
+      margin-top: 14px;
+      font-size: 0.85rem;
+      color: #34d399;
+      min-height: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <div class="icon-box">CB</div>
+    <h1>CashFlow Bank</h1>
+    <p>Download the official Android application for fast, secure access to your account anywhere.</p>
+
+    <!-- Replace href with your actual APK filename or GitHub Release URL -->
+    <a id="download-btn" class="btn" href="./cashflowbank.apk" download="CashFlowBank.apk">
+      Download Android APK
+    </a>
+
+    <div id="status-msg" class="status"></div>
+
+    <div class="meta">
+      <span>Package: cashflowbank.app</span>
+      <span>Platform: Android</span>
+    </div>
+  </div>
+
+  <script>
+    // Optional: Auto-trigger download 1.5 seconds after opening the page
+    window.addEventListener("DOMContentLoaded", () => {
+      const btn = document.getElementById("download-btn");
+      const status = document.getElementById("status-msg");
+
+      setTimeout(() => {
+        status.textContent = "Starting download automatically...";
+        btn.click();
+      }, 1500);
+    });
+  </script>
+
+</body>
+</html>
